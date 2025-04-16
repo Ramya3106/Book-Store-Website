@@ -33,7 +33,7 @@ const ImageList = [
 
 ];
 
-const Hero = () => {
+const Hero = ({handleOrderPopup}) => {
   const [imageId , setimageId]=useState(Book1);
   const [title , setTitle]=useState("Rock Paper Scissors ");
   const [description , setDescription]=useState(" Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, a. Possimus fugiat optio, beatae deserunt est tempora aliquid harum earum deleniti aut quia dicta voluptas. Laudantium omnis neque rerum unde!"
@@ -65,11 +65,19 @@ const Hero = () => {
         justify-center gap-4 pt-12 sm:pt-0
         text-center sm:text-left order-2
         sm:order-1'>
-        <h1 className='text-5xl sm:text-6xl
+        <h1 
+        data-aos="zoom-out"
+        data-aos-duration="500"
+        className='text-5xl sm:text-6xl
         lg:text-4xl font-bold'>
           {title}
 
-        <p className='bg-clip-text
+        <p 
+        data-aos="Zoom-out"
+        data-aos-duration="500"
+        data-aos-delay="100"
+        
+        className='bg-clip-text
         text-transparent bg-gradient-to-b
         from-primary text-right text-sm 
         to secondary'>
@@ -78,11 +86,17 @@ const Hero = () => {
         
         </h1>
 
-        <p className='text-sm'>
+        <p 
+        data-aos="Zoom-out"
+        data-aos-duration="500"
+        data-aos-delay="100"
+        className='text-sm'>
           {description}
         </p>
         <div>
         <button 
+        onClick={handleOrderPopup}       
+        data-aos="zoom-in"
         className='bg-gradient-to-r
         from-primary to-secondary
         text-white px-4 py-2 rounded-full
@@ -102,7 +116,11 @@ const Hero = () => {
         <div className='h-[300px] sm:h-[450px]
         overflow-hidden flex-justify-center
         items-center'>
-          <img src={imageId} alt='' 
+          <img 
+          data-aos="zoom-in"
+          data-aos-once="true"
+          
+          src={imageId} alt='' 
           className='w-[300] h-[450px]
           sm:[h-450px] sm:w-[450px]
           sm:scale-115 object-contain

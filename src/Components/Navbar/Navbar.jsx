@@ -34,7 +34,7 @@ const DropdownLinks = [
 ];
 
 
-const Navbar = () => {
+const Navbar = ({handleOrderPopup}) => {
   const [isDarkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -117,7 +117,9 @@ const Navbar = () => {
                 />
               </li>
           </ul>
-          <button className='bg-gradient-to-r
+          <button 
+          onClick={handleOrderPopup}
+          className='bg-gradient-to-r
           from-primary to-secondary
           text-white px-4 py-1
           rounded-full flex-items-center gap-3

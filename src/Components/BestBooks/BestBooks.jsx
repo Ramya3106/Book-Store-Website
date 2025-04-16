@@ -32,7 +32,7 @@ const BooksData = [
     
 ];
 
-const BestBooks = () => {
+const BestBooks = ({handleOrderPopup}) => {
   return (
     <>
     <div className='py-10'>
@@ -54,7 +54,10 @@ const BestBooks = () => {
             sm:grid-cols-2 md:grid-cols-3 md:gap-5
             place-items-center'>
                 {BooksData.map((book) => (
-                    <div className='rounded-2xl bg-white
+                    <div 
+                    data-aos="zoom-in"
+                    
+                    className='rounded-2xl bg-white
                     dark:bg-gray-800 hover:bg-primary
                     dark:hover:bg-primarry hover:text-white
                     relative shadow-xl duration-high group max-w-[300px]'>
@@ -79,7 +82,9 @@ const BestBooks = () => {
                             <p className='text-gray-500
                             group-hover:text-white
                             duration-300 text-sm line-clamp-2'>{book.description}</p>
-                            <button className='bg-primary
+                            <button 
+                            onClick={handleOrderPopup}
+                            className='bg-primary
                             to-secondary text-white px-4 py-2 rounded-full mt-4
                             hover:scale-105 duratiom-200 group-hover:bg-white
                             group-hover:text-primary'>Order Now</button>
