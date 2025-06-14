@@ -1,7 +1,7 @@
 import React from "react";
-import Book1 from "../../assets/books/book1.jpg";
-import Book2 from "../../assets/books/book2.jpg";
-import Book3 from "../../assets/books/book3.jpg";
+import Book1 from "../../assets/Books/Book1.jpg";
+import Book2 from "../../assets/Books/Book2.jpg";
+import Book3 from "../../assets/Books/Book3.jpg";
 import { FaStar } from "react-icons/fa6";
 
 const BooksData = [
@@ -48,9 +48,10 @@ const AllBooks = () => {
       <div className="mt-14 mb-12">
         <div className="container">
           {/* header */}
-          <div 
-          data-aos="slide-up"
-          className="text-center mb-10 max-w-[600px] mx-auto">
+          <div
+            data-aos="slide-up"
+            className="text-center mb-10 max-w-[600px] mx-auto"
+          >
             <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
               Best Books
             </p>
